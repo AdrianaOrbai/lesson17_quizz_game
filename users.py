@@ -18,12 +18,11 @@ def add_user(player_id: str, all_players: dict, path: str = "users.json") -> dic
 
     new_user = {player_id: {"full_name": full_name, "high_score": 0, "password": passwd}}
     all_players.update(new_user)
-
-
     with open(path, "r+") as f:
         f.write(json.dumps(all_players, indent=4))
 
     return new_user
+
 
 def login(path: str = "users.json"):
     is_new_user = False
