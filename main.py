@@ -1,6 +1,5 @@
 import json
 import time
-
 import users
 import game
 
@@ -20,9 +19,12 @@ if __name__ == '__main__':
     current_player = users.login()
 
     while True:
-        print(f"Let`s play {list(current_player.keys())[0]}")
-        game.run_game(current_player)
-        time.sleep(2)
-        user_pick = input("Do you want to play again? Y/N: ")
-        if user_pick.lower() == "n":
-            break
+        if list(current_player.keys())[0] == 'admin':
+            pass
+        else:
+            print(f"Let`s play {list(current_player.keys())[0]}")
+            game.run_game(current_player)
+            time.sleep(2)
+            user_pick = input("Do you want to play again? Y/N: ")
+            if user_pick.lower() == "n":
+                break
