@@ -11,5 +11,10 @@
         "full_name": "Jack",
         "high_score": 0,
         "password": "123"
+    },
+    "adri": {
+        "full_name": "Adri",
+        "high_score": 0,
+        "password": "1234"
     }
 }
